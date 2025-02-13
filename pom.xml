@@ -1,0 +1,17 @@
+<dependencies>
+    <!-- JUnit 4 dependency -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito dependency for mocking objects -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>4.0.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
