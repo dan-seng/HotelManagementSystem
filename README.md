@@ -18,9 +18,10 @@ The **Hotel Management System** is a Java-based application designed to streamli
  ┣ 📂 docs  
  ┃ ┣ 📜 SRS_Documentation.pdf  
  ┃ ┣ 📜 UML_Diagrams/ (Class Diagram, Sequence Diagram, Activity Diagram)  
- ┃ ┗ 📜 README.md  
- ┣ 📂 assets (Images, icons, and other resources)  
- ┗ 📜 .gitignore  
+ ┣ 📂 lib 
+ ┗ 📜hamcrest-core-1.3.jar
+ ┗ 📜jnit-4.13.2.jar
+ ┣📜 README.md  
 ```  
 
 ## ⚙️ Features  
@@ -68,6 +69,3 @@ The **Hotel Management System** is a Java-based application designed to streamli
 - **Meron Embaye** - EITM/TUR181583/16  
 - **Hermela Teklay** - EITM/TUR181556/16
 - **Eden Kidane** - EITM/TUR181647/16
-
-## 📜 License  
-This project is licensed under the **MIT License**.  
