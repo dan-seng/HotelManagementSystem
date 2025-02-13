@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HotelManagementSystemProject" basedir="." default="test">
+
+    <!-- Define properties for source and build directories -->
+    <property name="src.main.dir" value="src/main"/>
+    <property name="src.test.dir" value="src/test"/>
+    <property name="build.dir" value="build"/>
+    <property name="main.classes.dir" value="${build.dir}/classes"/>
+    <property name="test.classes.dir" value="${build.dir}/test-classes"/>
+    <property name="lib.dir" value="lib"/>
+
+    <!-- Create necessary directories -->
+    <target name="init">
+        <mkdir dir="${main.classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+    </target>
+
+    <!-- Compile main source files -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.main.dir}" destdir="${main.classes.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Compile test source files -->
+    <target name="compile-tests" depends="compile">
+        <javac srcdir="${src.test.dir}" destdir="${test.classes.dir}" includeantruntime="false">
+            <classpath>
+                <!-- Include main classes -->
+                <pathelement path="${main.classes.dir}"/>
+                <!-- Include external libraries (JUnit, etc.) -->
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Run JUnit tests -->
+    <target name="test" depends="compile-tests">
+        <mkdir dir="${build.dir}/test-reports"/>
+        <junit printsummary="on" haltonfailure="yes" fork="true">
+            <classpath>
+                <pathelement path="${main.classes.dir}"/>
+                <pathelement path="${test.classes.dir}"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <!-- Scan both the test classes and the main classes directories for test classes -->
+            <batchtest todir="${build.dir}/test-reports">
+                <fileset dir="${test.classes.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+                <fileset dir="${main.classes.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+            <formatter type="xml"/>
+            <formatter type="plain"/>
+        </junit>
+    </target>
+
+    <!-- Clean build artifacts -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+</project>
