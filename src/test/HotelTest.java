@@ -25,7 +25,6 @@ public class HotelTest {
         Customer customer = new Customer(2, "Alice", "Smith", 25, "0987654321", 2);
         hotel.bookRoom(customer);
         hotel.removeCustomer("Alice", "Smith");
-
         // Check if the room is now available again
         assertFalse("Room should be vacated after removing the customer.", hotel.rooms[1].isOccupied());
     }

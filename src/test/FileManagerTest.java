@@ -9,14 +9,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class FileManagerTest {
-
-  // TemporaryFolder rule creates temporary files and directories for testing.
   @Rule
   public TemporaryFolder folder = new TemporaryFolder();
-
   @Test
   public void testReadFileWhenFileDoesNotExist() {
-    // Create a filename that does not exist.
     String nonExistentFileName = folder.getRoot().getAbsolutePath() + "/nonexistent.txt";
     String[] result = FileManager.readFile(nonExistentFileName);
     assertNotNull("Result should not be null", result);
@@ -29,10 +25,8 @@ public class FileManagerTest {
     File tempFile = folder.newFile("testfile.txt");
     String fileName = tempFile.getAbsolutePath();
     String[] dataToWrite = { "Line 1", "Line 2", "Line 3" };
-
     // Write data (overwrite mode)
     FileManager.writeFile(fileName, dataToWrite, false);
-
     // Read the file and verify the content.
     String[] dataRead = FileManager.readFile(fileName);
     assertArrayEquals("The data read should match the data written.", dataToWrite, dataRead);
