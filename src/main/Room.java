@@ -55,13 +55,4 @@ public class Room {
         return roomNumber + "," + roomType + "," + roomPrice + "," + (isOccupied ? "Yes" : "No");
     }
 
-    public String isAvailable() {
-
-        throw new UnsupportedOperationException("Unimplemented method 'isAvailable'");
-    }
-
-    public void updateRoomPrice(double d) {
-
-        throw new UnsupportedOperationException("Unimplemented method 'updateRoomPrice'");
-    }
 }

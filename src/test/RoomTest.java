@@ -49,14 +49,5 @@ public class RoomTest {
   }
 
   // Test case for unimplemented method 'isAvailable'
-  @Test(expected = UnsupportedOperationException.class)
-  public void testIsAvailable() {
-    room.isAvailable(); // This method should throw an exception
-  }
-
-  // Test case for unimplemented method 'updateRoomPrice'
-  @Test(expected = UnsupportedOperationException.class)
-  public void testUpdateRoomPrice() {
-    room.updateRoomPrice(120.0); // This method should throw an exception
-  }
+ 
 }

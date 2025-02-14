@@ -16,11 +16,11 @@ public class EmployeeTest {
 
   @Test(expected = IllegalArgumentException.class)
   public void testInvalidAge() {
-    new Employee("John", "Doe", "Male", 0, "Developer", 60000.0);
+    new Employee("Hermela", "Teklay", "Female", 0, "Developer", 60000.0);
   }
   @Test(expected = IllegalArgumentException.class)
   public void testInvalidSalary() {
-    new Employee("Daniel", "Gidey", "Male", 21, "Developer", 0.0);
+    new Employee("Meron", "Embaye", "Female", 25, "Developer", 0.0);
   }
   @Test
   public void testToString() {
