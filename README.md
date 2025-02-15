@@ -7,21 +7,31 @@ The **Hotel Management System** is a Java-based application designed to streamli
 ```plaintext
 📦 HotelManagementSystem  
  ┣ 📂 src  
- ┃ ┣ 📜 Hotel.java  
- ┃ ┣ 📜 Customer.java  
- ┃ ┣ 📜 Employee.java  
- ┃ ┣ 📜 Room.java  
- ┃ ┣ 📜 Food.java  
- ┃ ┣ 📜 Drink.java  
- ┃ ┣ 📜 HotelManagementSystem.java (Main class)  
- ┃ ┗ 📜 FileManagement.java  
+ ┃ ┣ 📂 main  
+ ┃ ┃ ┣ 📜 Hotel.java  
+ ┃ ┃ ┣ 📜 Customer.java  
+ ┃ ┃ ┣ 📜 Employee.java  
+ ┃ ┃ ┣ 📜 Room.java  
+ ┃ ┃ ┣ 📜 Food.java  
+ ┃ ┃ ┣ 📜 Drink.java  
+ ┃ ┃ ┣ 📜 HotelManagementSystem.java (Main class)  
+ ┃ ┃ ┗ 📜 FileManagement.java  
+ ┃ ┗ 📂 test  
+ ┃ ┃ ┣ 📜 HotelTest.java  
+ ┃ ┃ ┣ 📜 CustomerTest.java  
+ ┃ ┃ ┣ 📜 EmployeeTest.java  
+ ┃ ┃ ┣ 📜 RoomTest.java  
+ ┃ ┃ ┣ 📜 FoodTest.java  
+ ┃ ┃ ┣ 📜 DrinkTest.java  
+ ┃ ┃ ┣ 📜 HotelManagementSystemTest.java  
+ ┃ ┃ ┗ 📜 FileManagementTest.java  
  ┣ 📂 docs  
  ┃ ┣ 📜 SRS_Documentation.pdf  
- ┃ ┣ 📜 UML_Diagrams/ (Class Diagram, Sequence Diagram, Activity Diagram)  
- ┣ 📂 lib 
- ┗ 📜hamcrest-core-1.3.jar
- ┗ 📜jnit-4.13.2.jar
- ┣📜 README.md  
+ ┃ ┗ 📜 UML_Diagrams/ (Class Diagram, Sequence Diagram, Activity Diagram)  
+ ┣ 📂 lib  
+ ┃ ┣ 📜 hamcrest-core-1.3.jar  
+ ┃ ┗ 📜 junit-4.13.2.jar  
+ ┣ 📜 README.md  
 ```  
 
 ## ⚙️ Features  

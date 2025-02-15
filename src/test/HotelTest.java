@@ -14,7 +14,7 @@ public class HotelTest {
 
     @Test
     public void testBookRoom() {
-        Customer customer = new Customer(1, "John", "Doe", 30, "1234567890", 1);
+        Customer customer = new Customer(1, "Hayle", "Abrha", 30, "1234567890", 101);
         hotel.bookRoom(customer);
         // Check if the room is now occupied
         assertTrue("Room should be occupied after booking.", hotel.rooms[0].isOccupied());
@@ -22,7 +22,7 @@ public class HotelTest {
 
     @Test
     public void testRemoveCustomer() {
-        Customer customer = new Customer(2, "Alice", "Smith", 25, "0987654321", 2);
+        Customer customer = new Customer(2, "Alice", "Smith", 25, "0987654321", 102);
         hotel.bookRoom(customer);
         hotel.removeCustomer("Alice", "Smith");
 

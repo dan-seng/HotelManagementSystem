@@ -5,8 +5,8 @@ public class CustomerTest {
   public void testValidCustomer() {
     Customer customer = new Customer(1, "Hayle", "Abrha", 30, "1234567890", 101);
     assertEquals(1, customer.getId());
-    assertEquals("John", customer.getFirstName());
-    assertEquals("Doe", customer.getLastName());
+    assertEquals("Hayle", customer.getFirstName());
+    assertEquals("Abrha", customer.getLastName());
     assertEquals(30, customer.getAge());
     assertEquals("1234567890", customer.getPhoneNumber());
     assertEquals(101, customer.getRoomNumber());
