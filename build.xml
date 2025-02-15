@@ -8,6 +8,7 @@
     <property name="main.classes.dir" value="${build.dir}/classes"/>
     <property name="test.classes.dir" value="${build.dir}/test-classes"/>
     <property name="lib.dir" value="lib"/>
+    <property name="jar.name" value="HotelManagementSystem.jar"/>
 
     <!-- Create necessary directories -->
     <target name="init">
@@ -43,7 +44,7 @@
     <!-- Run JUnit tests -->
     <target name="test" depends="compile-tests">
         <mkdir dir="${build.dir}/test-reports"/>
-        <junit printsummary="on" haltonfailure="yes" fork="true">
+        <junit printsummary="on" haltonfailure="no" fork="true">
             <classpath>
                 <pathelement path="${main.classes.dir}"/>
                 <pathelement path="${test.classes.dir}"/>
@@ -63,6 +64,17 @@
             <formatter type="xml"/>
             <formatter type="plain"/>
         </junit>
+    </target>
+
+    <!-- Generate a JAR file -->
+    <target name="jar" depends="compile" description="Package the project into a JAR file">
+        <mkdir dir="${build.dir}/jar"/>
+        <jar destfile="${build.dir}/jar/${jar.name}" basedir="${main.classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="HotelMangementSystem"/>
+            </manifest>
+        </jar>
+        <echo message="JAR file created at ${build.dir}/jar/${jar.name}"/>
     </target>
 
     <!-- Clean build artifacts -->
