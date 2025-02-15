@@ -82,23 +82,7 @@ public class Hotel {
         updateRoomFile();
     }
 
-    /*
-     * private void loadRooms() {
-     * String[] data = FileManager.readFile("rooms.txt");
-     * for (String line : data) {
-     * if (line != null && !line.trim().isEmpty()) {
-     * String[] parts = line.split(",");
-     * int roomNum = Integer.parseInt(parts[0]);
-     * Room room = new Room(roomNum, parts[1], Double.parseDouble(parts[2]));
-     * if (parts[3].equalsIgnoreCase("Yes")) {
-     * room.occupyRoomWithoutFileUpdate(); // Updated: method added in Room class
-     * }
-     * rooms[roomNum - 1] = room;
-     * }
-     * }
-     * updateRoomFile();
-     * }
-     */
+
 
     public void bookRoom(Customer customer) {
         int roomNumber = customer.getRoomNumber();
